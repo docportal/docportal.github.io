@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/fonts/Feather/feather.css">
+    <link rel="stylesheet" href="assets/libs/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="assets/libs/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="assets/libs/aos/dist/aos.css">
+    <link rel="stylesheet" href="assets/libs/jarallax/dist/jarallax.css">
+    <link rel="stylesheet" href="assets/libs/highlightjs/styles/vs2015.css">
+    <link rel="stylesheet" href="assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+
+    <title>DocPortal</title>
+  </head>
+  <body>
+   
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/brand.png" class="navbar-brand-img" alt="...">
+        </a>
+        
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="navbarBookAppointment" href="#" aria-expanded="false">
+                Book an Appointment
+              </a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" id="navbarAccount" href="#" aria-expanded="false">
+                My Appointments
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="navbarDocumentation" href="#" aria-expanded="false">
+                Doctor Registration
+              </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="#" target="_blank">
+            Contact us
+          </a>
+        </div>
+        
+      </div>
+    </nav>
+    
+    <!-- CONTENT
+    ================================================== -->
+    <section>
+      <div class="container d-flex flex-column">
+        <div class="row justify-content-center no-gutters min-vh-100">
+          <div class="col-8 col-md-6 col-lg-7 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
+
+            <!-- Image -->
+            <img src="assets/img/illustrations/illustration-3.png" alt="..." class="img-fluid" data-aos="fade-up" data-aos-delay="100">
+
+          </div>
+          <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11" data-aos="fade-up">
+            
+            <!-- Heading -->
+            <h1 class="mb-0 font-weight-bold text-center">
+              Register as a doctor
+            </h1>
+
+            <!-- Text -->
+            <p class="mb-6 text-center">
+              Set up your profile in minutes.
+            </p>
+            
+            <hr />
+            
+            <!-- Form -->
+            <form class="mb-6" data-aos="fade-up" data-aos-delay="50">
+              
+              <!-- Form heading - Personal details -->
+              <h3 class="mb-3 font-weight-bold text-muted">Personal details</h3>
+
+              <!-- License Number -->
+              <div class="form-group">
+                <label for="licenseNo">
+                  License Number
+                </label>
+                <input name="licenseNo" onChange={this.handleInputChange} type="text" class="form-control" id="licenseNo" placeholder="XXXXXXXXX" pattern="[0-9]*" />
+              </div>
+
+              <!-- First Name -->
+              <div class="form-group mb-5">
+                <label for="firstName">
+                  First Name
+                </label>
+                <input name="firstName" onChange={this.handleInputChange} type="text" class="form-control" id="firstName" placeholder="John" required />
+              </div>
+              
+               <!-- Last Name -->
+              <div class="form-group mb-5">
+                <label for="lastName">
+                  Last Name
+                </label>
+                <input name="lastName" onChange={this.handleInputChange} type="text" class="form-control" id="lastName" placeholder="Doe" required />
+              </div>
+              
+               <!-- Specialty -->
+              <div class="form-group mb-5">
+                <label for="specialty">
+                  Specialty
+                </label>
+                <select name="specialty" onChange={this.handleInputChange} type="text" class="form-control" id="specialty">
+                  <option>Family Physician</option>
+                  <option>Internal Medicine</option>
+                  <option>Pediatrician</option>
+                  <option>Gynecologist</option>
+                  <option>Surgeon</option>
+                  <option>Psychiatrist</option>
+                  <option>Cardiologist</option>
+                  <option>Dermatologist</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              
+               <!-- Working Hours -->
+              <div class="form-group mb-6">
+                <label>
+                  Working Hours
+                </label>
+                <div>
+                  <input name="startTime" onChange={this.handleInputChange} type="time" class="form-control" id="startTime" required />
+                </div>
+                <p class="mb-0 mw-25 text-center text-muted">to</p>
+                <div>
+                  <input name="endTime" onChange={this.handleInputChange} type="time" class="form-control" id="endTime" required />
+                </div>
+              </div>
+              
+              <hr />
+              
+              <!-- Form heading - Clinic details -->
+              <h3 class="mb-3 font-weight-bold text-muted">Clinic details</h3>
+              
+               <!-- Clinic Name -->
+              <div class="form-group mb-5">
+                <label for="clinicName">
+                  Clinic Name
+                </label>
+                <input name="clinicName" onChange={this.handleInputChange} type="text" class="form-control" id="clinicName" placeholder="Moriarty Clinic" required />
+              </div>
+              
+               <!-- Address -->
+              <div class="form-group mb-5">
+                <label for="address">
+                  Address
+                </label>
+                <input name="address" onChange={this.handleInputChange} type="text" class="form-control" id="address" placeholder="221B Baker Street" required />
+              </div>
+              
+               <!-- City -->
+              <div class="form-group mb-5">
+                <label for="city">
+                  City
+                </label>
+                <input name="city" onChange={this.handleInputChange} type="text" class="form-control" id="city" placeholder="Baskerville" required />
+              </div>
+              
+               <!-- State -->
+              <div class="form-group mb-5">
+                <label for="state">
+                  State
+                </label>
+                <input name="state" onChange={this.handleInputChange} type="text" class="form-control" id="state" placeholder="Maharashtra" required />
+              </div>
+              
+               <!-- Zip Code -->
+              <div class="form-group mb-5">
+                <label for="zipCode">
+                  Zip Code
+                </label>
+                <input name="zipCode" onChange={this.handleInputChange} type="text" class="form-control" id="zipCode" placeholder="XXXXXX" pattern="[0-9]{6}" required />
+              </div>
+              
+               <!-- Phone Number -->
+              <div class="form-group mb-5">
+                <label for="phoneNumber">
+                  Phone Number
+                </label>
+                <input name="phoneNumber" onChange={this.handleInputChange} type="text" class="form-control" id="phoneNumber" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" required />
+              </div>
+              
+               <!-- Email -->
+              <div class="form-group mb-5">
+                <label for="email">
+                  Email
+                </label>
+                <input name="email" onChange={this.handleInputChange} type="email" class="form-control" id="email" placeholder="abc@xyzmail.com" required />
+              </div>
+
+              <hr />
+              
+              <!-- Submit -->
+              <button class="btn btn-block btn-primary lift" type="submit">
+                Register
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 font-size-sm text-center text-muted">
+              Have any questions? <a href="#">Contact us</a>.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="assets/libs/aos/dist/aos.js"></script>
+    <script src="assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="assets/libs/typed.js/lib/typed.min.js"></script>
+    <script src="assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Map -->
+    <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl-2.html'></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+      
+  </body>
+
+</html>
